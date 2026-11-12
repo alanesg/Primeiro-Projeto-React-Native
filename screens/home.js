@@ -1,11 +1,16 @@
 import * as React from 'react';
- import { View, Text, Button } from 'react-native';
+ import { View, Text} from 'react-native';
+ import styles from '../styles/homeStyles';
 
  function HomeScreen({navigation}) {
      return (
-     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-         <Text>Home Screen</Text>
-         <Button title='Ir para About' onPress={() => navigation.navigate('About')} />
+     <View style={ styles.container}>
+        <Text style={styles.title}>
+            Bem Vindo(a)!
+        </Text>
+        <Text style={styles.description}>
+            Página inicial do aplicativo.
+        </Text>
      </View>
      );
  }

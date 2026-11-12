@@ -5,7 +5,10 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import HomeScreen from './screens/home';
 import AboutScreen from './screens/about';
-import ContactScreen from './screens/contact';
+import FornecedoresScreen from './screens/fornecedores';
+import CadastroScreen from './screens/cadastro';
+import ConsultaScreen from './screens/consulta';
+
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -26,10 +29,22 @@ export default function App() {
         />
 
         <Tab.Screen
-          name="Contato"
-          component={ContactScreen}
-          options={{ title: 'CONTATO' }}
+          name="Fornecedores"
+          component={FornecedoresScreen}
+          options={{ title: 'Fornecedores' }}
         />
+
+        <Tab.Screen
+          name="Cadastro"
+          component={CadastroScreen}
+          options={{ title: 'CADASTRO' }}
+        />  
+
+        <Tab.Screen
+          name="Consulta"
+          component={ConsultaScreen}
+          options={{ title: 'CONSULTA' }}
+        />  
       </Tab.Navigator>
     </NavigationContainer>
   );
